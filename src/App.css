@@ -1,0 +1,421 @@
+.app {
+  width: min(720px, calc(100% - 2rem));
+  margin: 0 auto;
+  padding: 2rem 0 3.5rem;
+}
+
+.user-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+  color: rgba(242, 239, 232, 0.75);
+}
+
+.btn.compact {
+  padding: 0.55rem 0.9rem;
+  font-size: 0.75rem;
+  margin-top: 0;
+}
+
+.auth-panel {
+  display: grid;
+  gap: 1rem;
+  animation: rise 0.8s 0.1s ease both;
+}
+
+.auth-tabs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem;
+}
+
+.auth-tab {
+  border: 1px solid rgba(242, 239, 232, 0.2);
+  background: rgba(7, 26, 18, 0.4);
+  color: rgba(242, 239, 232, 0.7);
+  padding: 0.85rem 1rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+}
+
+.auth-tab.active {
+  background: var(--signal);
+  color: var(--ink);
+  border-color: var(--signal);
+}
+
+.auth-form {
+  margin: 0;
+}
+
+.auth-error {
+  margin: 0;
+  padding: 0.7rem 0.85rem;
+  background: rgba(194, 59, 34, 0.2);
+  border: 1px solid rgba(194, 59, 34, 0.45);
+  color: #f2b8ae;
+  font-size: 0.9rem;
+  text-transform: none;
+  letter-spacing: 0;
+  font-weight: 500;
+}
+
+.auth-switch {
+  margin: 0;
+  text-align: center;
+  color: rgba(242, 239, 232, 0.7);
+  font-size: 0.95rem;
+}
+
+.link-btn {
+  border: 0;
+  background: none;
+  color: var(--signal);
+  font-weight: 700;
+  padding: 0;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.hero {
+  display: grid;
+  gap: 2.5rem;
+  min-height: calc(100vh - 4rem);
+  align-content: center;
+  animation: rise 0.7s ease both;
+}
+
+.hero-copy {
+  max-width: 28rem;
+}
+
+.eyebrow {
+  margin: 0 0 0.4rem;
+  font-size: 0.8rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--signal);
+  font-weight: 600;
+}
+
+.brand {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: clamp(4.5rem, 16vw, 7rem);
+  line-height: 0.9;
+  letter-spacing: 0.02em;
+  color: var(--cream);
+  text-shadow: 0 12px 40px rgba(0, 0, 0, 0.35);
+}
+
+.lede {
+  margin: 1rem 0 0;
+  font-size: 1.1rem;
+  line-height: 1.55;
+  color: rgba(242, 239, 232, 0.78);
+  max-width: 22rem;
+}
+
+.setup-form {
+  display: grid;
+  gap: 1rem;
+  padding: 1.5rem;
+  background: var(--panel);
+  border: 1px solid var(--glass);
+  backdrop-filter: blur(10px);
+  animation: rise 0.8s 0.1s ease both;
+}
+
+.setup-form label,
+.setup-form fieldset {
+  display: grid;
+  gap: 0.45rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: rgba(242, 239, 232, 0.7);
+}
+
+.setup-form fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  gap: 0.65rem;
+}
+
+.setup-form legend {
+  margin-bottom: 0.35rem;
+}
+
+.setup-form input,
+.setup-form select {
+  width: 100%;
+  padding: 0.85rem 1rem;
+  border: 1px solid rgba(242, 239, 232, 0.18);
+  background: rgba(7, 26, 18, 0.55);
+  color: var(--cream);
+  text-transform: none;
+  letter-spacing: 0;
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+.radio {
+  display: flex !important;
+  align-items: center;
+  gap: 0.6rem;
+  text-transform: none;
+  letter-spacing: 0;
+  font-size: 1rem !important;
+  font-weight: 500 !important;
+  color: var(--cream) !important;
+}
+
+.btn {
+  border: 0;
+  padding: 0.95rem 1.25rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  transition: transform 0.15s ease, background 0.15s ease, opacity 0.15s ease;
+}
+
+.btn:hover:not(:disabled) {
+  transform: translateY(-1px);
+}
+
+.btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.btn.primary {
+  background: var(--signal);
+  color: var(--ink);
+  margin-top: 0.35rem;
+}
+
+.btn.ghost {
+  background: transparent;
+  color: var(--cream);
+  border: 1px solid rgba(242, 239, 232, 0.25);
+}
+
+.btn.danger {
+  border-color: rgba(194, 59, 34, 0.55);
+  color: #f2b8ae;
+}
+
+.scoreboard {
+  padding: 1.5rem 0 1.75rem;
+  border-bottom: 1px solid rgba(242, 239, 232, 0.12);
+  animation: rise 0.55s ease both;
+}
+
+.scoreboard-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.brand-mini {
+  font-family: var(--font-display);
+  font-size: 1.75rem;
+  letter-spacing: 0.04em;
+}
+
+.innings-tag {
+  font-size: 0.8rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--signal);
+  font-weight: 600;
+}
+
+.batting-name {
+  margin: 0;
+  font-size: 1.05rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.score-line {
+  margin: 0.35rem 0 0.2rem;
+  font-family: var(--font-display);
+  font-size: clamp(4.5rem, 18vw, 7.5rem);
+  line-height: 0.9;
+  letter-spacing: 0.02em;
+}
+
+.score-line .sep {
+  opacity: 0.35;
+  margin: 0 0.15em;
+}
+
+.overs-line,
+.bowling-name,
+.prev-innings {
+  margin: 0.35rem 0 0;
+  color: rgba(242, 239, 232, 0.72);
+}
+
+.pad {
+  padding: 1.75rem 0 1rem;
+  animation: rise 0.65s 0.05s ease both;
+}
+
+.pad-title {
+  margin: 0 0 1rem;
+  font-size: 0.85rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(242, 239, 232, 0.65);
+}
+
+.pad-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.65rem;
+}
+
+.pad-btn {
+  min-height: 4.25rem;
+  border: 1px solid rgba(242, 239, 232, 0.16);
+  background: rgba(7, 26, 18, 0.45);
+  color: var(--cream);
+  font-family: var(--font-display);
+  font-size: 1.85rem;
+  letter-spacing: 0.04em;
+  transition: background 0.15s ease, transform 0.12s ease, border-color 0.15s ease;
+}
+
+.pad-btn:hover {
+  transform: translateY(-2px);
+  border-color: rgba(242, 239, 232, 0.35);
+  background: rgba(45, 138, 98, 0.35);
+}
+
+.pad-btn:active {
+  transform: translateY(0);
+}
+
+.pad-btn.boundary {
+  background: rgba(43, 108, 176, 0.28);
+  border-color: rgba(43, 108, 176, 0.45);
+}
+
+.pad-btn.boundary:hover {
+  background: rgba(43, 108, 176, 0.42);
+}
+
+.pad-btn.wicket {
+  background: rgba(194, 59, 34, 0.28);
+  border-color: rgba(194, 59, 34, 0.5);
+}
+
+.pad-btn.wicket:hover {
+  background: rgba(194, 59, 34, 0.42);
+}
+
+.pad-btn.extra {
+  background: rgba(232, 163, 23, 0.16);
+  border-color: rgba(232, 163, 23, 0.4);
+  font-size: 1.35rem;
+}
+
+.pad-actions {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.pad-actions .btn {
+  flex: 1;
+}
+
+.result-panel {
+  margin-top: 2rem;
+  padding: 1.75rem;
+  background: var(--panel);
+  border: 1px solid var(--glass);
+  animation: rise 0.55s ease both;
+}
+
+.result-panel h2 {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: 2.5rem;
+  letter-spacing: 0.03em;
+}
+
+.result-panel p {
+  margin: 0.5rem 0 1.25rem;
+  font-size: 1.15rem;
+  color: rgba(242, 239, 232, 0.85);
+}
+
+.timeline {
+  margin-top: 1.5rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid rgba(242, 239, 232, 0.12);
+  animation: rise 0.7s 0.1s ease both;
+}
+
+.timeline h3 {
+  margin: 0 0 0.85rem;
+  font-size: 0.8rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(242, 239, 232, 0.6);
+}
+
+.timeline ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+}
+
+.timeline li {
+  min-width: 2.5rem;
+  padding: 0.45rem 0.7rem;
+  text-align: center;
+  background: rgba(7, 26, 18, 0.5);
+  border: 1px solid rgba(242, 239, 232, 0.14);
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.timeline li.extra-ball {
+  border-color: rgba(232, 163, 23, 0.45);
+  color: var(--signal);
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (min-width: 720px) {
+  .hero {
+    grid-template-columns: 1.1fr 0.9fr;
+    align-items: center;
+    gap: 3rem;
+  }
+}
