@@ -33,6 +33,7 @@ function saveSession(user) {
   localStorage.setItem(SESSION_KEY, JSON.stringify({ name: user.name, email: user.email }))
 }
 
+
 export function AuthScreen({ onAuth }) {
   const [mode, setMode] = useState('login')
   const [name, setName] = useState('')
