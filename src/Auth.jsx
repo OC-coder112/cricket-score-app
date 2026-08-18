@@ -81,7 +81,7 @@ export function AuthScreen({ onAuth }) {
     <section className="hero auth-hero">
       <div className="hero-copy">
         <p className="eyebrow">PitchMark</p>
-        <h1 className="brand">{isLogin ? 'Welcome back' : 'Join the score'}</h1>
+        <h1 className="brand">{isLogin ? 'Welcome back OM' : 'Join the score'}</h1>
         <p className="lede">
           {isLogin
             ? 'Log in to set up matches and mark every ball live.'
